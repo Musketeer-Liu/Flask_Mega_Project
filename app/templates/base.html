@@ -1,18 +1,27 @@
 <html>
     <head>
       {% if title %}
-      <title>{{ title }} - Microblog</title>
+      <title>{{ title }} - Flask Blog</title>
       {% else %}
-      <title>Welcome to Microblog</title>
+      <title>Welcome to Flask Blog</title>
       {% endif %}
     </head>
     <body>
         <div>
-            Microblog:
+            Flask Blog:
             <a href="/index">Home</a>
             <a href="/login">Login</a>
         </div>
         <hr>
+        {% with message = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </body>
 </html>
