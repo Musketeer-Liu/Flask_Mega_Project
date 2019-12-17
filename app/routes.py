@@ -1,4 +1,5 @@
-from flask import render_template, flash, redirect, url_for, logout_user
+from flask import render_template, flash, redirect, url_for
+from flask_login import logout_user, login_required
 
 from app import app
 from app.forms import LoginForm
@@ -8,17 +9,17 @@ from app.forms import LoginForm
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': "Musketeer"}
-    posts = [
-        {
-            'author': {'username': 'Musketeer'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Paladin'},
-            'body': 'The Avengers movie was cool!'
-        }
-    ]
+    # user = {'username': "Musketeer"}
+    # posts = [
+    #     {
+    #         'author': {'username': 'Musketeer'},
+    #         'body': 'Beautiful day in Portland!'
+    #     },
+    #     {
+    #         'author': {'username': 'Paladin'},
+    #         'body': 'The Avengers movie was cool!'
+    #     }
+    # ]
     return render_template('index.html', title="Home", user=user, posts=posts)
 
 
@@ -37,7 +38,7 @@ def login():
     return render_template('login.html',  title='Sign In', form=form)
 
 
-@app.route('logout')
+@app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
