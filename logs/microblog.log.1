@@ -1,0 +1,127 @@
+2019-12-18 15:25:58,542 INFO: Microblog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:43]
+2019-12-18 15:26:00,898 ERROR: Exception on /explore [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 43, in explore
+    next_url = url_for('explore', page=posts.next_num) if posts.has_next else None
+AttributeError: 'list' object has no attribute 'has_next'
+2019-12-18 15:26:02,102 ERROR: Exception on /explore [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 43, in explore
+    next_url = url_for('explore', page=posts.next_num) if posts.has_next else None
+AttributeError: 'list' object has no attribute 'has_next'
+2019-12-18 15:26:10,853 ERROR: Exception on /explore [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 43, in explore
+    next_url = url_for('explore', page=posts.next_num) if posts.has_next else None
+AttributeError: 'list' object has no attribute 'has_next'
+2019-12-18 15:30:20,263 INFO: Microblog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:43]
+2019-12-18 15:30:22,607 ERROR: Exception on /login [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 71, in login
+    page, app.config['POST_PER_PAGE'], False
+KeyError: 'POST_PER_PAGE'
+2019-12-18 15:30:23,578 ERROR: Exception on /login [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 71, in login
+    page, app.config['POST_PER_PAGE'], False
+KeyError: 'POST_PER_PAGE'
+2019-12-18 15:30:24,842 ERROR: Exception on /login [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 71, in login
+    page, app.config['POST_PER_PAGE'], False
+KeyError: 'POST_PER_PAGE'
+2019-12-18 15:30:25,665 ERROR: Exception on /login [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 71, in login
+    page, app.config['POST_PER_PAGE'], False
+KeyError: 'POST_PER_PAGE'
