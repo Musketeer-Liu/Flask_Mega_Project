@@ -14,6 +14,9 @@ from config import Config
 
 
 app = Flask(__name__)
+from app.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
+
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -60,4 +63,4 @@ def get_locale():
     # return 'es'
 
 
-from app import routes, models, errors
+from app import routes, models
