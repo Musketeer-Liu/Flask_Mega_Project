@@ -41,3 +41,4 @@ Flask_Mega_Project.log*
 
 .vscode
 .history
+.env
