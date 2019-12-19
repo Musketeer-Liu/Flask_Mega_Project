@@ -116,3 +116,4 @@ Traceback (most recent call last):
 KeyError: 'LANGUAGESS'
 2019-12-19 00:28:14,032 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]
 2019-12-19 00:36:22,258 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:57]
+2019-12-19 00:42:05,969 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:57]
