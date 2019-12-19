@@ -103,3 +103,7 @@ Traceback (most recent call last):
     raise self._undefined_exception(hint)
 jinja2.exceptions.UndefinedError: 'flask_moment._moment object' has no attribute 'formNow'
 2019-12-18 22:37:59,673 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:52]
+2019-12-18 23:12:23,175 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]
+2019-12-18 23:16:53,740 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]
+2019-12-18 23:18:04,624 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]
+2019-12-18 23:18:15,699 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]

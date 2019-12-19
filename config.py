@@ -16,3 +16,5 @@ class Config(object):
     ADMINS = ['your-email@exmaple.com']
 
     POSTS_PER_PAGE = 3
+
+    LANGUAGES = ['en', 'es']
