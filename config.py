@@ -13,7 +13,7 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'application.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    ReDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
 
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
