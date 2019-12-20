@@ -70,10 +70,10 @@ class User(UserMixin, db.Model):
         primaryjoin=(followers.c.follower_id == id),
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
-    message_sent = db.relationship(
+    messages_sent = db.relationship(
         'Message', foreign_keys='Message.sender_id',
         backref='author', lazy='dynamic')
-    message_received = db.relationship(
+    messages_received = db.relationship(
         'Message', foreign_keys='Message.recipient_id',
         backref='recipient', lazy='dynamic')
     last_messages_read_time = db.Column(db.DateTime)

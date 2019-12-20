@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-20 12:44-0800\n"
+"POT-Creation-Date: 2019-12-20 12:59-0800\n"
 "PO-Revision-Date: 2019-12-18 23:13-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: app/templates/send_message.html:5
 #, python-format
-msgid "Send Message to %(recipient)s%"
+msgid "Send Message to %(recipient)s"
 msgstr ""
 
 #: app/templates/user.html:8
@@ -304,5 +304,8 @@ msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr ""
 
 #~ msgid "[Flask Blog] Reset Your Password"
+#~ msgstr ""
+
+#~ msgid "Send Message to %(recipient)s%"
 #~ msgstr ""
 
