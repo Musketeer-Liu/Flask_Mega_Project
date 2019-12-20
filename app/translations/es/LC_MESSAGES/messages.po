@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-19 10:57-0800\n"
+"POT-Creation-Date: 2019-12-19 22:33-0800\n"
 "PO-Revision-Date: 2019-12-18 23:13-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:21
 msgid "Please log in to access this page."
 msgstr ""
 
@@ -107,45 +107,49 @@ msgstr ""
 msgid "Say something"
 msgstr ""
 
-#: app/main/routes.py:35
+#: app/main/forms.py:32 app/main/routes.py:150
+msgid "Search"
+msgstr ""
+
+#: app/main/routes.py:38
 msgid "Your post is now live!"
 msgstr ""
 
-#: app/main/routes.py:44 app/templates/base.html:25
+#: app/main/routes.py:47 app/templates/base.html:25
 msgid "Home"
 msgstr ""
 
-#: app/main/routes.py:59 app/templates/base.html:26
+#: app/main/routes.py:62 app/templates/base.html:26
 msgid "Explore"
 msgstr ""
 
-#: app/main/routes.py:87
+#: app/main/routes.py:90
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app/main/routes.py:92 app/templates/edit_profile.html:5
+#: app/main/routes.py:95 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr ""
 
-#: app/main/routes.py:101 app/main/routes.py:117
+#: app/main/routes.py:104 app/main/routes.py:120
 #, python-format
 msgid "User %(username)s not found."
 msgstr ""
 
-#: app/main/routes.py:104
+#: app/main/routes.py:107
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app/main/routes.py:108
+#: app/main/routes.py:111
 #, python-format
 msgid "You are following %(username)s!"
 msgstr ""
 
-#: app/main/routes.py:120
+#: app/main/routes.py:123
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app/main/routes.py:124
+#: app/main/routes.py:127
 #, python-format
 msgid "You are not following %(username)s."
 msgstr ""
@@ -159,19 +163,19 @@ msgstr ""
 msgid "Translate"
 msgstr ""
 
-#: app/templates/base.html:30
+#: app/templates/base.html:39
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:32
+#: app/templates/base.html:41
 msgid "Profile"
 msgstr ""
 
-#: app/templates/base.html:33
+#: app/templates/base.html:42
 msgid "Logout"
 msgstr ""
 
-#: app/templates/base.html:70
+#: app/templates/base.html:79
 msgid "Error: Could not contact server."
 msgstr ""
 
@@ -186,6 +190,18 @@ msgstr ""
 
 #: app/templates/index.html:22 app/templates/user.html:36
 msgid "Older posts"
+msgstr ""
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr ""
+
+#: app/templates/search.html:13
+msgid "Previous results"
+msgstr ""
+
+#: app/templates/search.html:18
+msgid "Next results"
 msgstr ""
 
 #: app/templates/user.html:8

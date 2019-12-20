@@ -1,4 +1,4 @@
-2019-12-19 00:27:31,779 ERROR: Exception on /user/paladin [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+2019-12-19 23:13:21,248 ERROR: Exception on /search [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,44 +14,16 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 136, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/yutong/Flask_Mega_Project/app/templates/user.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
-    return concat(self.root_render_func(self.new_context(vars)))
-  File "/Users/yutong/Flask_Mega_Project/app/templates/user.html", line 14, in root
-    {% if user == current_user %}
-  File "/Users/yutong/Flask_Mega_Project/app/templates/base.html", line 14, in root
-    <div class="navbar-header">
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 10, in root
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block_doc
-    {% block body -%}
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 39, in block_html
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 92, in block_body
-  File "/Users/yutong/Flask_Mega_Project/app/templates/base.html", line 81, in block_content
-  File "/Users/yutong/Flask_Mega_Project/app/templates/user.html", line 31, in block_app_content
-    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
-    return __obj(*args, **kwargs)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 630, in _fail_with_undefined_error
-    raise self._undefined_exception(hint)
-jinja2.exceptions.UndefinedError: '_' is undefined
-2019-12-19 00:27:40,519 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]
-2019-12-19 00:27:44,092 ERROR: Exception on /user/paladin [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+  File "/Users/yutong/Flask_Mega_Project/app/main/routes.py", line 146, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/Users/yutong/Flask_Mega_Project/app/models.py", line 23, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/yutong/Flask_Mega_Project/app/search.py", line 23, in query_index
+    'form': (page - 1) * per_page, 'size': per_page})
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+TypeError: search() got an unexpected keyword argument 'doc_type'
+2019-12-19 23:13:28,234 ERROR: Exception on /search [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -61,18 +33,65 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1947, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2241, in preprocess_request
-    rv = func()
-  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 19, in before_request
-    g.locale = str(get_locale())
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
-    rv = babel.locale_selector_func()
-  File "/Users/yutong/Flask_Mega_Project/app/__init__.py", line 59, in get_locale
-    return request.accept_languages.best_match(app.config['LANGUAGESS'])
-KeyError: 'LANGUAGESS'
-2019-12-19 00:27:48,043 ERROR: Exception on /user/paladin [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/yutong/Flask_Mega_Project/app/main/routes.py", line 146, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/Users/yutong/Flask_Mega_Project/app/models.py", line 23, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/yutong/Flask_Mega_Project/app/search.py", line 23, in query_index
+    'form': (page - 1) * per_page, 'size': per_page})
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+TypeError: search() got an unexpected keyword argument 'doc_type'
+2019-12-19 23:14:48,122 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:73]
+2019-12-19 23:14:53,467 ERROR: Exception on /search [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/connection.py", line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 238, in perform_request
+    method, url, body, retries=Retry(False), headers=request_headers, **kw
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/util/retry.py", line 376, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1252, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1298, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1247, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/connection.py", line 184, in connect
+    conn = self._new_conn()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x109370190>: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -82,45 +101,24 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1947, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2241, in preprocess_request
-    rv = func()
-  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 19, in before_request
-    g.locale = str(get_locale())
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
-    rv = babel.locale_selector_func()
-  File "/Users/yutong/Flask_Mega_Project/app/__init__.py", line 59, in get_locale
-    return request.accept_languages.best_match(app.config['LANGUAGESS'])
-KeyError: 'LANGUAGESS'
-2019-12-19 00:27:52,171 ERROR: Exception on / [GET] [in /Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1947, in full_dispatch_request
-    rv = self.preprocess_request()
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 2241, in preprocess_request
-    rv = func()
-  File "/Users/yutong/Flask_Mega_Project/app/routes.py", line 19, in before_request
-    g.locale = str(get_locale())
-  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_babel/__init__.py", line 257, in get_locale
-    rv = babel.locale_selector_func()
-  File "/Users/yutong/Flask_Mega_Project/app/__init__.py", line 59, in get_locale
-    return request.accept_languages.best_match(app.config['LANGUAGESS'])
-KeyError: 'LANGUAGESS'
-2019-12-19 00:28:14,032 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:54]
-2019-12-19 00:36:22,258 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:57]
-2019-12-19 00:42:05,969 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:57]
-2019-12-19 10:56:30,336 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
-2019-12-19 10:56:46,872 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
-2019-12-19 10:57:03,924 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
-2019-12-19 10:57:13,482 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
-2019-12-19 10:57:28,562 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
-2019-12-19 10:57:36,918 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
-2019-12-19 10:59:40,451 INFO: Flask Blog startup [in /Users/yutong/Flask_Mega_Project/app/__init__.py:71]
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/yutong/Flask_Mega_Project/app/main/routes.py", line 146, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "/Users/yutong/Flask_Mega_Project/app/models.py", line 23, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/Users/yutong/Flask_Mega_Project/app/search.py", line 25, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/client/utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/client/__init__.py", line 811, in search
+    "GET", _make_path(index, "_search"), params=params, body=body
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/transport.py", line 358, in perform_request
+    timeout=timeout,
+  File "/Users/yutong/Flask_Mega_Project/venv/lib/python3.7/site-packages/elasticsearch/connection/http_urllib3.py", line 250, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x109370190>: Failed to establish a new connection: [Errno 61] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x109370190>: Failed to establish a new connection: [Errno 61] Connection refused)
