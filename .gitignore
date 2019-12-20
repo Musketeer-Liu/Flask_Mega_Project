@@ -38,6 +38,8 @@ nosetests.xml
 venv
 app.db
 Flask_Mega_Project.log*
+microblog.log*
+flaskblog.log*
 
 .vscode
 .history
