@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-20 15:29-0800\n"
+"POT-Creation-Date: 2019-12-23 14:24-0800\n"
 "PO-Revision-Date: 2019-12-18 23:13-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -31,7 +31,7 @@ msgid "Error: the translation service failed."
 msgstr ""
 
 #: app/auth/email.py:8
-msgid "[Microblog] Reset Your Password"
+msgid "[Flask Blog] Reset Your Password"
 msgstr ""
 
 #: app/auth/forms.py:10 app/auth/forms.py:17 app/main/forms.py:10
@@ -107,7 +107,7 @@ msgstr ""
 msgid "Say something"
 msgstr ""
 
-#: app/main/forms.py:32 app/main/routes.py:157
+#: app/main/forms.py:32 app/main/routes.py:161
 msgid "Search"
 msgstr ""
 
@@ -115,62 +115,62 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: app/main/routes.py:37
+#: app/main/routes.py:38
 msgid "Your post is now live!"
 msgstr ""
 
-#: app/main/routes.py:46 app/templates/base.html:25
+#: app/main/routes.py:50 app/templates/base.html:25
 msgid "Home"
 msgstr ""
 
-#: app/main/routes.py:61 app/templates/base.html:26
+#: app/main/routes.py:65 app/templates/base.html:26
 msgid "Explore"
 msgstr ""
 
-#: app/main/routes.py:96
+#: app/main/routes.py:100
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app/main/routes.py:101 app/templates/edit_profile.html:5
+#: app/main/routes.py:105 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr ""
 
-#: app/main/routes.py:110 app/main/routes.py:126
+#: app/main/routes.py:114 app/main/routes.py:130
 #, python-format
 msgid "User %(username)s not found."
 msgstr ""
 
-#: app/main/routes.py:113
+#: app/main/routes.py:117
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app/main/routes.py:117
+#: app/main/routes.py:121
 #, python-format
 msgid "You are following %(username)s!"
 msgstr ""
 
-#: app/main/routes.py:129
+#: app/main/routes.py:133
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app/main/routes.py:133
+#: app/main/routes.py:137
 #, python-format
 msgid "You are not following %(username)s."
 msgstr ""
 
-#: app/main/routes.py:171
+#: app/main/routes.py:175
 msgid "Your message has been sent."
 msgstr ""
 
-#: app/main/routes.py:173
+#: app/main/routes.py:177
 msgid "Send Message"
 msgstr ""
 
-#: app/main/routes.py:209
+#: app/main/routes.py:213
 msgid "An export task is currently in progress"
 msgstr ""
 
-#: app/main/routes.py:211
+#: app/main/routes.py:215
 msgid "Exporting posts..."
 msgstr ""
 
@@ -319,5 +319,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Send Message to %(recipient)s%"
+#~ msgstr ""
+
+#~ msgid "[Microblog] Reset Your Password"
 #~ msgstr ""
 
